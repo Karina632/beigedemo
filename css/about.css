@@ -1,0 +1,355 @@
+/* =========================
+   ABOUT PAGE PREMIUM
+========================= */
+
+.page-hero{
+
+  min-height:100vh;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
+
+  padding:140px 8% 100px;
+}
+
+.page-hero-content{
+  max-width:900px;
+}
+
+.page-hero-content span{
+
+  color:var(--brown-light);
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+
+  font-size:0.8rem;
+}
+
+.page-hero-content h1{
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:6rem;
+
+  line-height:0.95;
+
+  margin:30px 0;
+
+  font-weight:500;
+}
+
+.page-hero-content i{
+  color:var(--brown-light);
+}
+
+.page-hero-content p{
+
+  max-width:700px;
+
+  margin:auto auto 45px;
+
+  color:var(--muted);
+
+  line-height:2;
+
+  font-size:1.05rem;
+}
+
+/* STORY */
+
+.story-section{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:90px;
+
+  align-items:center;
+}
+
+.story-image img{
+
+  height:760px;
+
+  object-fit:cover;
+
+  border-radius:40px;
+
+  box-shadow:
+  0 25px 60px rgba(43,29,26,0.15);
+}
+
+.story-text span{
+
+  color:var(--brown-light);
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+}
+
+.story-text h2{
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:5rem;
+
+  line-height:1;
+
+  margin:25px 0 30px;
+}
+
+.story-text p{
+
+  color:var(--muted);
+
+  line-height:2;
+
+  margin-bottom:25px;
+
+  max-width:550px;
+}
+
+/* VALUES */
+
+.values{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:30px;
+
+  padding-top:40px;
+}
+
+.value-card{
+
+  background:rgba(255,255,255,0.7);
+
+  backdrop-filter:blur(14px);
+
+  border:1px solid rgba(255,255,255,0.4);
+
+  border-radius:32px;
+
+  padding:55px 40px;
+
+  text-align:center;
+
+  transition:0.5s ease;
+
+  box-shadow:var(--shadow);
+}
+
+.value-card:hover{
+
+  transform:translateY(-10px);
+
+  box-shadow:var(--shadow-hover);
+}
+
+.value-card h3{
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:2.4rem;
+
+  margin-bottom:18px;
+}
+
+.value-card p{
+
+  color:var(--muted);
+
+  line-height:1.9;
+}
+
+/* PREMIUM SECTION */
+
+.premium-about{
+
+  padding-top:40px;
+}
+
+.premium-about-content{
+
+  background:var(--brown);
+
+  border-radius:50px;
+
+  padding:80px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:60px;
+
+  align-items:center;
+}
+
+.premium-left span{
+
+  color:#c9ab96;
+
+  text-transform:uppercase;
+
+  letter-spacing:4px;
+
+  font-size:0.8rem;
+}
+
+.premium-left h2{
+
+  color:white;
+
+  font-family:'Cormorant Garamond',serif;
+
+  font-size:5rem;
+
+  line-height:1;
+
+  margin:25px 0;
+}
+
+.premium-left p{
+
+  color:#d8c7bc;
+
+  line-height:2;
+
+  max-width:500px;
+}
+
+.premium-right{
+
+  display:flex;
+
+  gap:25px;
+
+  justify-content:flex-end;
+
+  flex-wrap:wrap;
+}
+
+.premium-box{
+
+  width:220px;
+
+  background:rgba(255,255,255,0.06);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:35px;
+
+  padding:50px 30px;
+
+  text-align:center;
+}
+
+.premium-box h3{
+
+  color:white;
+
+  font-size:4rem;
+
+  font-family:'Cormorant Garamond',serif;
+
+  margin-bottom:12px;
+}
+
+.premium-box p{
+  color:#d8c7bc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .story-section,
+  .premium-about-content{
+
+    grid-template-columns:1fr;
+
+    gap:60px;
+  }
+
+  .story-text{
+    text-align:center;
+  }
+
+  .story-text p{
+    margin:auto auto 25px;
+  }
+
+  .premium-left{
+    text-align:center;
+  }
+
+  .premium-left p{
+    margin:auto;
+  }
+
+  .premium-right{
+    justify-content:center;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .page-hero{
+    min-height:auto;
+    padding-top:180px;
+  }
+
+  .page-hero-content h1{
+    font-size:4rem;
+  }
+
+  .story-image img{
+    height:500px;
+  }
+
+  .story-text h2,
+  .premium-left h2{
+    font-size:3.2rem;
+  }
+
+  .values{
+    grid-template-columns:1fr;
+  }
+
+  .premium-about-content{
+    padding:40px 25px;
+  }
+
+  .premium-box{
+    width:100%;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .page-hero-content h1{
+    font-size:3.2rem;
+  }
+
+  .story-text h2,
+  .premium-left h2{
+    font-size:2.7rem;
+  }
+
+}
