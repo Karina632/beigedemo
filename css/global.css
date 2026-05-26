@@ -1,27 +1,43 @@
+html,
+body{
+  overflow-x:hidden;
+}
+
 /* NAVBAR */
 
 .navbar{
+
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 
-  position:sticky;
+  gap:30px;
+
+  position:fixed !important;
+
   top:20px;
+  left:50%;
 
-  z-index:999;
+  transform:translateX(-50%);
 
-  margin:20px 40px;
+  width:min(1280px, calc(100% - 40px));
 
-  padding:18px 30px;
+  padding:16px 26px;
 
   border-radius:999px;
 
-  background:rgba(255,255,255,0.6);
+  background:rgba(255,255,255,0.72);
 
-  backdrop-filter:blur(16px);
+  backdrop-filter:blur(18px);
+
+  border:1px solid rgba(255,255,255,0.35);
 
   box-shadow:
   0 10px 40px rgba(0,0,0,0.05);
+
+  z-index:9999;
+
+  transition:0.4s ease;
 }
 
 .logo{
@@ -29,14 +45,19 @@
 
   font-family:'Cormorant Garamond',serif;
 
-  font-size:2rem;
+  font-size:1.8rem;
 
   color:#9f7d63;
+
+  white-space:nowrap;
 }
 
 .nav-links{
   display:flex;
-  gap:40px;
+  align-items:center;
+  gap:28px;
+
+  margin-left:auto;
 }
 
 .nav-links a{
@@ -51,21 +72,70 @@
 }
 
 .nav-btn{
+
   text-decoration:none;
 
   background:#2b1d1a;
 
   color:white;
 
-  padding:15px 28px;
+  padding:13px 22px;
 
   border-radius:999px;
 
   transition:0.3s ease;
+
+  white-space:nowrap;
+
+  font-size:0.88rem;
 }
 
 .nav-btn:hover{
   transform:translateY(-2px);
+}
+
+/* STICKY NAVBAR */
+
+.navbar.scrolled{
+
+  top:12px;
+
+  background:
+  rgba(255,255,255,0.82);
+
+  backdrop-filter:blur(20px);
+
+  box-shadow:
+  0 20px 50px rgba(43,29,26,0.08);
+}
+
+/* NAV HOVER */
+
+.nav-links a{
+
+  position:relative;
+}
+
+.nav-links a::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0;
+
+  height:1px;
+
+  background:#2b1d1a;
+
+  transition:0.3s ease;
+}
+
+.nav-links a:hover::after{
+  width:100%;
 }
 
 /* FOOTER */
@@ -213,9 +283,15 @@
 @media(max-width:768px){
 
   .navbar{
-    margin:20px;
-    border-radius:30px;
-  }
+
+  width:calc(100% - 16px);
+
+  padding:14px 18px;
+}
+
+.logo{
+  font-size:1.7rem;
+}
 
   .nav-links{
     position:absolute;

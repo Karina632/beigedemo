@@ -5,6 +5,7 @@
 .pricing-hero{
 
   min-height:85vh;
+  padding-top: 220px;
 
   display:flex;
   align-items:center;
