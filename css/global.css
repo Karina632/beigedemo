@@ -28,7 +28,7 @@ body{
 
   background:rgba(255,255,255,0.72);
 
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(4px);
 
   border:1px solid rgba(255,255,255,0.35);
 
@@ -201,6 +201,7 @@ body{
 
 .footer-bottom{
   padding-top:30px;
+  text-align: center;
 }
 
 .footer-bottom p{
@@ -231,7 +232,7 @@ body{
 
   text-decoration:none;
 
-  font-size:1.5rem;
+  font-size:1.9rem;
 
   z-index:999;
 }

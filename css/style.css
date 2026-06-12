@@ -188,7 +188,7 @@ img{
 
   background:rgba(255,255,255,0.7);
 
-  backdrop-filter:blur(10px);
+ 
 }
 
 .hero-outline-btn:hover{
@@ -303,6 +303,7 @@ img{
   z-index:2;
 
   height:760px;
+  display: block;
 
   object-fit:cover;
 
@@ -435,26 +436,26 @@ img{
 
 .service-card{
 
-  background:rgba(255,255,255,0.7);
-
-  backdrop-filter:blur(14px);
-
-  border:1px solid rgba(255,255,255,0.4);
+  background:white;
 
   border-radius:32px;
 
   overflow:hidden;
 
-  transition:0.5s ease;
+  border:1px solid #ece4dc;
 
-  box-shadow:var(--shadow);
+  transition:0.35s ease;
+
+  box-shadow:
+  0 10px 25px rgba(0,0,0,0.05);
 }
 
 .service-card:hover{
 
-  transform:translateY(-10px);
+  transform:translateY(-6px);
 
-  box-shadow:var(--shadow-hover);
+  box-shadow:
+  0 20px 40px rgba(0,0,0,0.08);
 }
 
 .service-card img{
@@ -503,6 +504,32 @@ img{
   font-size:0.9rem;
 
   letter-spacing:1px;
+}
+
+.service-features{
+
+  list-style:none;
+
+  margin-bottom:25px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:10px;
+}
+
+.service-features li{
+
+  color:var(--muted);
+
+  font-size:0.95rem;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
 }
 
 /* =========================
@@ -758,8 +785,7 @@ img{
 
   background:rgba(255,255,255,0.7);
 
-  backdrop-filter:blur(12px);
-
+ 
   border-radius:30px;
 
   padding:45px;
@@ -874,6 +900,7 @@ img{
 }
 
 .gallery-arrow{
+  color: black;
 
   position:absolute;
 
@@ -890,7 +917,7 @@ img{
 
   background:rgba(255,255,255,0.9);
 
-  backdrop-filter:blur(10px);
+ 
 
   font-size:1.4rem;
 
@@ -972,7 +999,7 @@ img{
 
   background:rgba(255,255,255,0.7);
 
-  backdrop-filter:blur(20px);
+  
 
   border:1px solid rgba(255,255,255,0.4);
 
